@@ -220,3 +220,9 @@ class IslamicPrayerTimeSensor(Entity):
         prayer_time = self.prayer_times_data.prayer_times_info[self.name]
         pt_dt = self.get_prayer_time_as_dt(prayer_time)
         self._state = pt_dt.isoformat()
+        
+        """
+Can you add extra sensors for each prayer time (EX: sensor.islamic_prayer_time_maghrib_state) that will 
+have state = 0 when not prayer time and state= 1 when prayer time so it can be used for automation
+and adding an offset feature will be helpful
+"""
